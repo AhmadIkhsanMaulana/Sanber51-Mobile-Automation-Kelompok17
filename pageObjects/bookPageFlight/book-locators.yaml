@@ -1,6 +1,6 @@
 book-menu-button: //android.widget.Button[@resource-id="com.example.myapplication:id/book"]
 one-way-button: //android.widget.TextView[@text="ONE WAY"]
-round-trip-button: //android.widget.TextView[@text="ROUND TRIP"]
+round-trip-button: //android.support.v7.app.ActionBar.Tab[@content-desc="Round Trip"]
 from-city-dropdown: //android.widget.Spinner[@resource-id="com.example.myapplication:id/spinnerFrom"]
 to-city-dropdown: //android.widget.Spinner[@resource-id="com.example.myapplication:id/spinnerTo"]
 class-dropdown: //android.widget.Spinner[@resource-id="com.example.myapplication:id/spinnerClass"]
