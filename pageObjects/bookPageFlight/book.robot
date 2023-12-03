@@ -2,27 +2,38 @@
 Resource        ../base.robot
 Variables       book-locators.yaml
 
+
 *** Keywords ***
 Click Book Menu After Login
-    Click Element           ${book-menu-button}
+    Wait Until Element Is Visible    ${book-menu-button}
+    Click Element    ${book-menu-button}
 
-Click One Way Trip          
-    Click Element           ${one-way-button}
+Click One Way Trip
+    Click Element    ${one-way-button}
 
-Select One in From City        
-    [Arguments]             ${from-city}
-    Click Element           ${from-city-dropdown}
-    Select From List        ${from-city-dropdown}   ${from-city}
+Select One in From City
+    [Arguments]    ${from-city}
+    Click Element    ${from-city-dropdown}
+    Select From List By Value    ${from-city-dropdown}    ${from-city}
 
 Select One on To City
-    [Arguments]             ${from-city}
-    Click Element           ${to-city-dropdown}
-    Select From List        ${to-city-dropdown}     ${from-city}
+    [Arguments]    ${from-city}
+    Click Element    ${to-city-dropdown}
+    Select From List By Value    ${to-city-dropdown}    ${from-city}
 
 Select Flight Class
-    [Arguments]             ${class}
-    Click Element           ${class-dropdown}
-    Select From List        ${class-dropdown}       ${class}
+    [Arguments]    ${class}
+    Click Element    ${class-dropdown}
+    Select From List By Value    ${class-dropdown}    ${class}
 
+Select Book Type Flight
+    Click Element    ${flight-radio-button}
 
+Select Book Type Flight And Hotel
+    Click Element    ${flight-hotel-radio-button}
 
+Select Book Type Plus Min 1 Day
+    Click Element    ${day-checkbox}
+
+Click Submit Flight
+    Click Element    ${book-button-flight}
