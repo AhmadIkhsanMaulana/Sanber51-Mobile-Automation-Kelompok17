@@ -14,4 +14,5 @@ Input Password On Login Page
     Input Text      ${password-input}   ${password}
 
 Click Sign In Button On Login Page
+    Wait Until Element Is Visible       ${sign-in-button} 
     Click Element   ${sign-in-button}

@@ -41,3 +41,17 @@ Failed Login Using an Invalid Username and Valid Password
     Input Password On Login Page            ${VALID_PASSWORD} 
     Click Sign In Button On Login Page
     Close Flight Application
+
+Failed Login Using Blank Username and Valid Password
+    Open Flight Application
+    Click Sign In Button On Homepage
+    Input Password On Login Page    ${VALID_PASSWORD}
+    Click Sign In Button On Login Page
+    Close Flight Application
+
+Failed Login Using Valid Username and Blank Password
+    Open Flight Application
+    Click Sign In Button On Homepage
+    Input Username On Login Page    ${VALID_USERNAME}
+    Click Sign In Button On Login Page
+    Close Flight Application
