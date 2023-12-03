@@ -23,3 +23,6 @@ Select Flight Class
     [Arguments]             ${class}
     Click Element           ${class-dropdown}
     Select From List        ${class-dropdown}       ${class}
+
+
+
