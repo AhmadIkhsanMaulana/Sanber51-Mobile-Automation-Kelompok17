@@ -46,6 +46,9 @@ Common Form Booking One Way Trip Steps
         Select Book Type Plus Min 1 Day
     END
     Click Submit Flight
+    Select Flight Price
+    Click Confirm Order Booking Flight
+    Show Message Success Booking
 Common Form Booking Round Trip Steps
     [Arguments]      ${check_date}    ${book_type}
     Click Sign In Button On Homepage
@@ -80,12 +83,15 @@ Common Form Booking Round Trip Steps
         Select Book Type Plus Min 1 Day
     END
     Click Submit Flight
+    Select Flight Price
+    Click Confirm Order Booking Flight
+    Show Message Success Booking
 
 *** Test Cases ***
 Successful Book One Way Flight
     Common Form Booking One Way Trip Steps    startend    flight
 
-Successful Book One Way Fligh And Hotel
+Successful Book One Way Flight And Hotel
     Common Form Booking One Way Trip Steps    startend    flight and hotel
 
 # Expected Failed, Actual Success (Bug)
@@ -106,5 +112,5 @@ Failed to Book One Way Without Selecting End Date
 Successful Book Round Trip Flight
     Common Form Booking Round Trip Steps   startend    flight
 
-Successful Book Round Trip Fligh And Hotel
+Successful Book Round Trip Flight And Hotel
     Common Form Booking Round Trip Steps   startend    flight and hotel
