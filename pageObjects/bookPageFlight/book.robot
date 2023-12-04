@@ -89,3 +89,13 @@ Select Book Type Plus Min 1 Day
 
 Click Submit Flight
     Click Element    ${book-button-flight}
+
+Select Flight Price
+    Wait Until Element Is Visible    ${price-second}
+    Click Element    ${price-second}
+
+Click Confirm Order Booking Flight
+    Click Element    ${button-confirm-order}
+
+Show Message Success Booking
+    Wait Until Page Contains Element    ${should-message-booking}

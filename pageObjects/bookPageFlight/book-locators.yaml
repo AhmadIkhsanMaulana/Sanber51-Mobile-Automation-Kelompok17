@@ -24,6 +24,6 @@ flight-radio-button: //android.widget.RadioButton[@resource-id="com.example.myap
 flight-hotel-radio-button: //android.widget.RadioButton[@resource-id="com.example.myapplication:id/radioButtonFlightHotel"]
 day-checkbox: //android.widget.CheckBox[@resource-id="com.example.myapplication:id/checkBoxDay"]
 book-button-flight: //android.widget.Button[@resource-id="com.example.myapplication:id/book_flight"]
-# from-city-options: {'Option1': //android.widget.TextView[@resource-id="android:id/text1" and @text="New York"],
-#                     'Option2'://android.widget.TextView[@resource-id="android:id/text1" and @text="Chicago"]',
-#                       'Option3'://android.widget.TextView[@resource-id="android:id/text1" and @text="Toronto"]}
+price-second: //android.widget.Button[@resource-id="com.example.myapplication:id/price2"]
+button-confirm-order: //android.widget.Button[@resource-id="com.example.myapplication:id/confirm_order"]
+should-message-booking: //android.widget.CheckedTextView[@resource-id="com.example.myapplication:id/checkedTextView"]
