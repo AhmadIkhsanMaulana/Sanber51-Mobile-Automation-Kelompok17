@@ -6,7 +6,7 @@
 | Nama        | Fitur    |
 |-----------------|---------------|
 | Alif Andarta| Sign In:<br>Failed Login Using Blank Username and Valid Password <br>Failed Login Using Valid Username and Blank Password <br>Book: <br>Successful Book One Way Flight <br>Successful Book One Way And Hotel <br>Failed Book One Way Without Select Book Type |
-| Ahmad Ikhsan Maulana|  |
+| Ahmad Ikhsan Maulana| Book: <br>Failed to Book One Way Without Selecting Start Date and End Date <br>Failed to Book One Way Without Selecting Start Date <br>Failed to Book One Way Without Selecting End Date <br>Successful Book Round Trip Flight  <br>Successful Book Round Trip Flight And Hotel|
 | M. Yoga Sugama (michikhyo)| |
 | Nufikha Rizki|  |
 | Rizqi Kartika S| Sign In: <br>Successful Login Using a Valid Username and Password <br>Failed Login Using an Invalid Username and Password <br>Failed Login Using a Valid Username and Invalid Password <br>Failed Login Using an Invalid Username and Valid Password <br>Failed Login with Both Empty Username and Password |
