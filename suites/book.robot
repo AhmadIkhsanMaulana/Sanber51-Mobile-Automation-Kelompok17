@@ -90,38 +90,6 @@ Common Form Booking Round Trip Steps
 *** Test Cases ***
 Successful Book One Way Flight
     Common Form Booking One Way Trip Steps    startend    flight
-    #Test Cases start
-    Click Round Trip
-    Select From City
-    Select Toronto
-    Select To City
-    Select Ottawa
-    Select Flight Class
-    Select Business
-    # Conditional for argument $check_date}
-    IF   '${check_date}' == 'startend'
-        Select Start Date
-        Select End Date  
-    ELSE IF    '${check_date}' == 'start'
-        Select Start Date
-    ELSE IF    '${check_date}' == 'end'
-        Select End Date
-    ELSE
-        Log    check_date is not valid
-    END
-    # Conditional for argument ${book_type}
-    IF   '${book_type}' == 'flight'
-        Select Book Type Flight
-    ELSE IF    '${book_type}' == 'flight and hotel'
-        Select Book Type Flight And Hotel
-    ELSE
-        Select Book Type Plus Min 1 Day
-    END
-    Click Submit Flight
-    Select Flight Price
-    Click Confirm Order Booking Flight
-    Show Message Success Booking
-    
 
 Successful Book One Way Flight And Hotel
     Common Form Booking One Way Trip Steps    startend    flight and hotel
@@ -146,3 +114,19 @@ Successful Book Round Trip Flight
 
 Successful Book Round Trip Flight And Hotel
     Common Form Booking Round Trip Steps   startend    flight and hotel
+#nufikha
+# Expected Failed, Actual Success (Bug)
+Failed to Book Round Trip Without Select Book Type
+    Common Form Booking Round Trip Steps    startend    " "
+
+# Expected Failed, Actual Success (Bug)
+Failed to Book Round Trip Without Selecting Start Date and End Date
+    Common Form Booking Round Trip Steps    " "    flight
+
+# Expected Failed, Actual Success (Bug)
+Failed to Book a Round Trip Without Selecting Start Date
+    Common Form Booking Round Trip Steps    end    flight and hotel
+
+# Expected Failed, Actual Success (Bug)
+Failed to Book a Round Trip Without Selecting End Date
+    Common Form Booking Round Trip Steps    start    flight
