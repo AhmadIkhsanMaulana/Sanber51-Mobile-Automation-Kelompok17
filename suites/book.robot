@@ -42,8 +42,10 @@ Common Form Booking One Way Trip Steps
         Select Book Type Flight
     ELSE IF    '${book_type}' == 'flight and hotel'
         Select Book Type Flight And Hotel
-    ELSE
+    ELSE IF    '${book_type}' == 'plusminday'
         Select Book Type Plus Min 1 Day
+    ELSE
+        Log    book_type not found
     END
     Click Submit Flight
     Select Flight Price
@@ -79,13 +81,57 @@ Common Form Booking Round Trip Steps
         Select Book Type Flight
     ELSE IF    '${book_type}' == 'flight and hotel'
         Select Book Type Flight And Hotel
-    ELSE
+    ELSE IF    '${book_type}' == 'plusminday'
         Select Book Type Plus Min 1 Day
+    ELSE
+        Log    book_type not found
     END
     Click Submit Flight
     Select Flight Price
     Click Confirm Order Booking Flight
     Show Message Success Booking    
+
+Common Form Booking With Price Steps
+    [Arguments]      ${check_date}    ${book_type}    ${check_price}
+    Click Sign In Button On Homepage
+    Input Username On Login Page            ${VALID_USERNAME}
+    Input Password On Login Page            ${VALID_PASSWORD}
+    Click Sign In Button On Login Page
+    Click Book Menu After Login
+    Click Round Trip
+    Select From City
+    Select Toronto
+    Select To City
+    Select Ottawa
+    Select Flight Class
+    Select Business
+    # Conditional for argument $check_date}
+    IF   '${check_date}' == 'startend'
+        Select Start Date
+        Select End Date  
+    ELSE IF    '${check_date}' == 'start'
+        Select Start Date
+    ELSE IF    '${check_date}' == 'end'
+        Select End Date
+    ELSE
+        Log    check_date is not valid
+    END
+    # Conditional for argument ${book_type}
+    IF   '${book_type}' == 'flight'
+        Select Book Type Flight
+    ELSE IF    '${book_type}' == 'flight and hotel'
+        Select Book Type Flight And Hotel
+    ELSE IF    '${book_type}' == 'plusminday'
+        Select Book Type Plus Min 1 Day
+    ELSE
+        Log    book_type not found
+    END
+    Click Submit Flight
+    IF   '${check_price}' == 'yes'
+       Select Flight Price 
+    END
+    Click Confirm Order Booking Flight
+    Show Message Success Booking
 
 *** Test Cases ***
 Successful Book One Way Flight And Hotel
@@ -125,12 +171,11 @@ Failed Book Round Trip Without Selecting Start Date
     Common Form Booking One Way Trip Steps    end    Flight and hotel
     
 # Expected Failed, Actual Success (Bug)
-Failed Book Round Trip Without Selecting End Date
-    Common Form Booking One Way Trip Steps    Start   Flight and hotel
-
-Successful Confirm Booking With Choosing the Price
-    Common Form Booking Round Trip Steps    flight    " "
+Failed to Book a Round Trip Without Selecting End Date
+    Common Form Booking Round Trip Steps    start    flight
+Successful Confirm Booking with Select Price
+    Common Form Booking With Price Steps    startend    flight    yes
 
 # Expected Failed, Actual Success (Bug)
-Failed Confirm Booking Without Choosing the Price
-    Common Form Booking Round Trip Steps    flight    " "  
+Failed Confirm Booking Without Select Price
+    Common Form Booking With Price Steps    startend    plusminday    no

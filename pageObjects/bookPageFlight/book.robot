@@ -95,6 +95,7 @@ Select Flight Price
     Click Element    ${price-second}
 
 Click Confirm Order Booking Flight
+    Wait Until Element Is Visible    ${button-confirm-order}
     Click Element    ${button-confirm-order}
 
 Show Message Success Booking
