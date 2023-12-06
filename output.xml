@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231206 17:22:41.570" rpa="false" schemaversion="4">
-<suite id="s1" name="Book" source="c:\Sanber51-Mobile-Automation-Kelompok17\suites\book.robot">
-<test id="s1-t1" name="Failed Confirm Booking Without Choose Price" line="133">
+
 <kw name="Open Flight Application" library="base" type="SETUP">
 <kw name="Open Application" library="AppiumLibrary">
 <arg>${REMOTE_URL}</arg>
@@ -17,50 +15,10 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<msg timestamp="20231206 17:22:44.135" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000002C78AD30FB0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /wd/hub/session</msg>
-<msg timestamp="20231206 17:22:46.166" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000002C78AD323C0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /wd/hub/session</msg>
-<msg timestamp="20231206 17:22:48.206" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000002C78AD32540&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /wd/hub/session</msg>
-<kw name="Capture Page Screenshot" library="AppiumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20231206 17:22:50.258" level="FAIL">No application is open</msg>
-<status status="FAIL" starttime="20231206 17:22:50.254" endtime="20231206 17:22:50.305"/>
-</kw>
-<msg timestamp="20231206 17:22:50.307" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
-<msg timestamp="20231206 17:22:50.307" level="FAIL">MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /wd/hub/session (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000002C78AD32690&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</msg>
-<status status="FAIL" starttime="20231206 17:22:41.955" endtime="20231206 17:22:50.318"/>
-</kw>
-<status status="FAIL" starttime="20231206 17:22:41.954" endtime="20231206 17:22:50.319"/>
-</kw>
-<kw name="Close Flight Application" library="base" type="TEARDOWN">
-<kw name="Close Application" library="AppiumLibrary">
-<doc>Closes the current application and also close webdriver session.</doc>
-<kw name="Capture Page Screenshot" library="AppiumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20231206 17:22:50.322" level="FAIL">No application is open</msg>
-<status status="FAIL" starttime="20231206 17:22:50.321" endtime="20231206 17:22:50.325"/>
-</kw>
-<msg timestamp="20231206 17:22:50.326" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
-<msg timestamp="20231206 17:22:50.328" level="FAIL">No application is open</msg>
-<status status="FAIL" starttime="20231206 17:22:50.321" endtime="20231206 17:22:50.329"/>
-</kw>
-<status status="FAIL" starttime="20231206 17:22:50.320" endtime="20231206 17:22:50.329">No application is open</status>
-</kw>
-<status status="FAIL" starttime="20231206 17:22:41.952" endtime="20231206 17:22:50.329">Setup failed:
-MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /wd/hub/session (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000002C78AD32690&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
-
-Also teardown failed:
-No application is open</status>
-</test>
-<status status="FAIL" starttime="20231206 17:22:41.581" endtime="20231206 17:22:50.329"/>
-</suite>
-<statistics>
-<total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Book">Book</stat>
 </suite>
 </statistics>
 <errors>

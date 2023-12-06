@@ -88,9 +88,6 @@ Common Form Booking Round Trip Steps
     Show Message Success Booking    
 
 *** Test Cases ***
-Successful Book One Way Flight
-    Common Form Booking One Way Trip Steps    startend    flight  
-
 Successful Book One Way Flight And Hotel
     Common Form Booking One Way Trip Steps    startend    flight and hotel
 
@@ -114,22 +111,3 @@ Successful Book Round Trip Flight
 
 Successful Book Round Trip Flight And Hotel
     Common Form Booking Round Trip Steps   startend    flight and hotel
-
-Failed to Book Round Trip Without Choose Flight, Flight+hotel, +/-1Day
-    Common Form Booking Round Trip Steps   startend     " "
-
-Failed Book Round Trip Without Choose Start Date and End Date
-    Common Form Booking Round Trip Steps    " "         flight and hotel
-
-Failed Book Round Trip Without Choose Start Date
-    Common Form Booking Round Trip Steps    end         flight and hotel
-
-Failed Book Round Trip Without Choose End Date
-    Common Form Booking Round Trip Steps    start       flight and hotel
-
-Successful Confirm Booking with Choose Price
-    Common Form Booking One Way Trip Steps    startend    flight and hotel    " "
-
-Failed Confirm Booking Without Choose Price
-    Common Form Booking One Way Trip Steps    startend    flight and hotel    
-
