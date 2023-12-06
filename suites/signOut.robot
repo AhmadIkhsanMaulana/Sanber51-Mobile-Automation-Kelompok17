@@ -3,8 +3,8 @@ Resource        ../pageObjects/base.robot
 Resource        ../pageObjects/homePageFlight/homePage.robot
 Resource        ../pageObjects/signInFlight/signIn.robot
 Resource        ../pageObjects/signOutFlight/signOut.robot
-Test Setup      Open Flight Application
-#Test Teardown   Close Flight Application
+Suite Setup      Open Flight Application
+Suite Teardown   Close Flight Application
 
 *** Variables ***
 ${VALID_USERNAME}           support@ngendigital.com
