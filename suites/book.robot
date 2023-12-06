@@ -128,4 +128,8 @@ Failed Book Round Trip Without Choose End Date
     Common Form Booking Round Trip Steps    start       flight and hotel
 
 Successful Confirm Booking with Choose Price
-    
+    Common Form Booking One Way Trip Steps    startend    flight and hotel    " "
+
+Failed Confirm Booking Without Choose Price
+    Common Form Booking One Way Trip Steps    startend    flight and hotel    
+
