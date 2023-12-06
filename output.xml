@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231206 12:59:57.637" rpa="false" schemaversion="4">
+<suite id="s1" name="Book" source="c:\Sanber51-Mobile-Automation-Kelompok17\suites\book.robot">
+<test id="s1-t1" name="Failed to Book Round Trip Without Choose Flight, Flight+hotel, +/-1Day" line="118">
+<kw name="Open Flight Application" library="base" type="SETUP">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<msg timestamp="20231206 13:00:00.365" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000013B9B65D4F0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /wd/hub/session</msg>
+<msg timestamp="20231206 13:00:02.404" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000013B9B65DAC0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /wd/hub/session</msg>
+<msg timestamp="20231206 13:00:04.448" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000013B9B65E840&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /wd/hub/session</msg>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20231206 13:00:06.478" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20231206 13:00:06.475" endtime="20231206 13:00:06.552"/>
+</kw>
+<msg timestamp="20231206 13:00:06.553" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20231206 13:00:06.568" level="FAIL">MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /wd/hub/session (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000013B9B65EAB0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</msg>
+<status status="FAIL" starttime="20231206 12:59:58.237" endtime="20231206 13:00:06.610"/>
+</kw>
+<status status="FAIL" starttime="20231206 12:59:58.235" endtime="20231206 13:00:06.612"/>
+</kw>
+<kw name="Close Flight Application" library="base" type="TEARDOWN">
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20231206 13:00:06.651" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20231206 13:00:06.651" endtime="20231206 13:00:06.658"/>
+</kw>
+<msg timestamp="20231206 13:00:06.664" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20231206 13:00:06.672" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20231206 13:00:06.624" endtime="20231206 13:00:06.674"/>
+</kw>
+<status status="FAIL" starttime="20231206 13:00:06.618" endtime="20231206 13:00:06.674">No application is open</status>
+</kw>
+<status status="FAIL" starttime="20231206 12:59:58.232" endtime="20231206 13:00:06.706">Setup failed:
+MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=4723): Max retries exceeded with url: /wd/hub/session (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000013B9B65EAB0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+Also teardown failed:
+No application is open</status>
+</test>
+<status status="FAIL" starttime="20231206 12:59:57.644" endtime="20231206 13:00:06.714"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Book">Book</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231206 12:59:58.187" level="ERROR">Error in file 'c:\Sanber51-Mobile-Automation-Kelompok17\pageObjects\homePageFlight\homePage.robot' on line 3: Processing variable file 'c:\Sanber51-Mobile-Automation-Kelompok17\pageObjects\homePageFlight\home-locators.yaml' failed: Using YAML variable files requires PyYAML module to be installed. Typically you can install it by running `pip install pyyaml`.</msg>
+<msg timestamp="20231206 12:59:58.206" level="ERROR">Error in file 'c:\Sanber51-Mobile-Automation-Kelompok17\pageObjects\signInFlight\signIn.robot' on line 3: Processing variable file 'c:\Sanber51-Mobile-Automation-Kelompok17\pageObjects\signInFlight\signIn-locators.yaml' failed: Using YAML variable files requires PyYAML module to be installed. Typically you can install it by running `pip install pyyaml`.</msg>
+<msg timestamp="20231206 12:59:58.222" level="ERROR">Error in file 'c:\Sanber51-Mobile-Automation-Kelompok17\pageObjects\bookPageFlight\book.robot' on line 3: Processing variable file 'c:\Sanber51-Mobile-Automation-Kelompok17\pageObjects\bookPageFlight\book-locators.yaml' failed: Using YAML variable files requires PyYAML module to be installed. Typically you can install it by running `pip install pyyaml`.</msg>
+<msg timestamp="20231206 13:00:00.365" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000013B9B65D4F0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /wd/hub/session</msg>
+<msg timestamp="20231206 13:00:02.404" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000013B9B65DAC0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /wd/hub/session</msg>
+<msg timestamp="20231206 13:00:04.448" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000013B9B65E840&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /wd/hub/session</msg>
+<msg timestamp="20231206 13:00:06.553" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20231206 13:00:06.664" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>

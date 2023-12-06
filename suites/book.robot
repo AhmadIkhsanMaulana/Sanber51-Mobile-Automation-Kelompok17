@@ -85,38 +85,7 @@ Common Form Booking Round Trip Steps
     Click Submit Flight
     Select Flight Price
     Click Confirm Order Booking Flight
-    Show Message Success Booking
-    
-
-Failed to Book Round Trip Without Choose Flight Flight+hotel +/-1Day
-    Click Sign In Button On Login Page
-    Insert Username on Login Page
-    Insert Password on Login Page
-    Click Sign In Button On Login Page
-    Click Book Menu After Login
-    Click Round Trip
-    Click Round Trip
-    Select From City
-    Select Toronto
-    Select To City
-    Select Ottawa
-    Select Flight Class
-    Select Business
-    # Conditional for argument $check_date}
-    IF   '${check_date}' == 'startend'
-        Select Start Date
-        Select End Date  
-    ELSE IF    '${check_date}' == 'start'
-        Select Start Date
-    ELSE IF    '${check_date}' == 'end'
-        Select End Date
-    ELSE
-        Log    check_date is not valid
-    END
-    Click Submit Flight
-    Select Flight Price
-    Click Confirm Order Booking Flight
-    
+    Show Message Success Booking    
 
 *** Test Cases ***
 Successful Book One Way Flight
@@ -146,5 +115,17 @@ Successful Book Round Trip Flight
 Successful Book Round Trip Flight And Hotel
     Common Form Booking Round Trip Steps   startend    flight and hotel
 
-Failed tp Book Round Trip Without Choose Flight Flight+hotel +/-1Day
+Failed to Book Round Trip Without Choose Flight, Flight+hotel, +/-1Day
+    Common Form Booking Round Trip Steps   startend     " "
+
+Failed Book Round Trip Without Choose Start Date and End Date
+    Common Form Booking Round Trip Steps    " "         flight and hotel
+
+Failed Book Round Trip Without Choose Start Date
+    Common Form Booking Round Trip Steps    end         flight and hotel
+
+Failed Book Round Trip Without Choose End Date
+    Common Form Booking Round Trip Steps    start       flight and hotel
+
+Successful Confirm Booking with Choose Price
     
