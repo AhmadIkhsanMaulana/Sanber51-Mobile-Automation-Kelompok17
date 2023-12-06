@@ -111,3 +111,26 @@ Successful Book Round Trip Flight
 
 Successful Book Round Trip Flight And Hotel
     Common Form Booking Round Trip Steps   startend    flight and hotel
+
+# Expected Failed, Actual Success (Bug)
+Failed Book Round Trip Flight Flight and Hotel +/-1Day
+    Common Form Booking Round Trip Steps    startend    " "
+
+# Expected Failed, Actual Success (Bug)
+Failed Book Round Trip Without Selecting Start Date and End Date
+    Common Form Booking One Way Trip Steps   " "   flight
+
+# Expected Failed, Actual Success (Bug)
+Failed Book Round Trip Without Selecting Start Date
+    Common Form Booking One Way Trip Steps    end    Flight and hotel
+    
+# Expected Failed, Actual Success (Bug)
+Failed Book Round Trip Without Selecting End Date
+    Common Form Booking One Way Trip Steps    Start   Flight and hotel
+
+Successful Confirm Booking With Choosing the Price
+    Common Form Booking Round Trip Steps    flight    " "
+
+# Expected Failed, Actual Success (Bug)
+Failed Confirm Booking Without Choosing the Price
+    Common Form Booking Round Trip Steps    flight    " "  
