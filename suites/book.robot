@@ -86,44 +86,41 @@ Common Form Booking Round Trip Steps
     Select Flight Price
     Click Confirm Order Booking Flight
     Show Message Success Booking
+    
+
+Failed to Book Round Trip Without Choose Flight Flight+hotel +/-1Day
+    Click Sign In Button On Login Page
+    Insert Username on Login Page
+    Insert Password on Login Page
+    Click Sign In Button On Login Page
+    Click Book Menu After Login
+    Click Round Trip
+    Click Round Trip
+    Select From City
+    Select Toronto
+    Select To City
+    Select Ottawa
+    Select Flight Class
+    Select Business
+    # Conditional for argument $check_date}
+    IF   '${check_date}' == 'startend'
+        Select Start Date
+        Select End Date  
+    ELSE IF    '${check_date}' == 'start'
+        Select Start Date
+    ELSE IF    '${check_date}' == 'end'
+        Select End Date
+    ELSE
+        Log    check_date is not valid
+    END
+    Click Submit Flight
+    Select Flight Price
+    Click Confirm Order Booking Flight
+    
 
 *** Test Cases ***
 Successful Book One Way Flight
-    Common Form Booking One Way Trip Steps    startend    flight
-    #Test Cases start
-        Click Round Trip
-        Select From City
-        Select Toronto
-        Select To City
-        Select Ottawa
-        Select Flight Class
-        Select Business
-        # Conditional for argument $check_date}
-        IF   '${check_date}' == 'startend'
-            Select Start Date
-            Select End Date  
-        ELSE IF    '${check_date}' == 'start'
-            Select Start Date
-        ELSE IF    '${check_date}' == 'end'
-            Select End Date
-        ELSE
-            Log    check_date is not valid
-        END
-        # Conditional for argument ${book_type}
-        IF   '${book_type}' == 'flight'
-            Select Book Type Flight
-        ELSE IF    '${book_type}' == 'flight and hotel'
-            Select Book Type Flight And Hotel
-        ELSE
-            Select Book Type Plus Min 1 Day
-        END
-        Click Submit Flight
-        Select Flight Price
-        Click Confirm Order Booking Flight
-        Show Message Success Booking
-    #Test Cases End
-
-    
+    Common Form Booking One Way Trip Steps    startend    flight  
 
 Successful Book One Way Flight And Hotel
     Common Form Booking One Way Trip Steps    startend    flight and hotel
@@ -148,3 +145,6 @@ Successful Book Round Trip Flight
 
 Successful Book Round Trip Flight And Hotel
     Common Form Booking Round Trip Steps   startend    flight and hotel
+
+Failed tp Book Round Trip Without Choose Flight Flight+hotel +/-1Day
+    
