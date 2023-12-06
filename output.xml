@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <robot generator="Robot 6.1.1 (Python 3.11.5 on darwin)" generated="20231206 18:52:08.582" rpa="false" schemaversion="4">
 <suite id="s1" name="Search" source="/Users/ahmadikhsanmaulana/Documents/Sanber51-Mobile-Automation-Kelompok17/suites/search.robot">
 <test id="s1-t1" name="Successfully Search For A Valid Flight Number" line="34">
+=======
+
+>>>>>>> main
 <kw name="Open Flight Application" library="base" type="SETUP">
 <kw name="Open Application" library="AppiumLibrary">
 <arg>${REMOTE_URL}</arg>
@@ -17,6 +21,7 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<<<<<<< HEAD
 <status status="PASS" starttime="20231206 18:52:08.936" endtime="20231206 18:52:17.023"/>
 </kw>
 <status status="PASS" starttime="20231206 18:52:08.936" endtime="20231206 18:52:17.024"/>
@@ -455,13 +460,26 @@ xpath criteria: //android.widget.EditText[@resource-id="com.example.myapplicatio
 <statistics>
 <total>
 <stat pass="3" fail="0" skip="0">All Tests</stat>
+=======
+>>>>>>> main
 </total>
 <tag>
 </tag>
 <suite>
+<<<<<<< HEAD
 <stat pass="3" fail="0" skip="0" id="s1" name="Search">Search</stat>
+=======
+>>>>>>> main
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20231206 17:22:41.929" level="ERROR">Error in file 'c:\Sanber51-Mobile-Automation-Kelompok17\pageObjects\homePageFlight\homePage.robot' on line 3: Processing variable file 'c:\Sanber51-Mobile-Automation-Kelompok17\pageObjects\homePageFlight\home-locators.yaml' failed: Using YAML variable files requires PyYAML module to be installed. Typically you can install it by running `pip install pyyaml`.</msg>
+<msg timestamp="20231206 17:22:41.935" level="ERROR">Error in file 'c:\Sanber51-Mobile-Automation-Kelompok17\pageObjects\signInFlight\signIn.robot' on line 3: Processing variable file 'c:\Sanber51-Mobile-Automation-Kelompok17\pageObjects\signInFlight\signIn-locators.yaml' failed: Using YAML variable files requires PyYAML module to be installed. Typically you can install it by running `pip install pyyaml`.</msg>
+<msg timestamp="20231206 17:22:41.947" level="ERROR">Error in file 'c:\Sanber51-Mobile-Automation-Kelompok17\pageObjects\bookPageFlight\book.robot' on line 3: Processing variable file 'c:\Sanber51-Mobile-Automation-Kelompok17\pageObjects\bookPageFlight\book-locators.yaml' failed: Using YAML variable files requires PyYAML module to be installed. Typically you can install it by running `pip install pyyaml`.</msg>
+<msg timestamp="20231206 17:22:44.135" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000002C78AD30FB0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /wd/hub/session</msg>
+<msg timestamp="20231206 17:22:46.166" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000002C78AD323C0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /wd/hub/session</msg>
+<msg timestamp="20231206 17:22:48.206" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000002C78AD32540&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /wd/hub/session</msg>
+<msg timestamp="20231206 17:22:50.307" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20231206 17:22:50.326" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
 </errors>
 </robot>
