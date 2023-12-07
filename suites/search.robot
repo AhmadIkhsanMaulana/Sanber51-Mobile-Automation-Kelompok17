@@ -21,25 +21,26 @@ Success Sign In
     Input Username On Login Page            ${VALID_USERNAME}
     Input Password On Login Page            ${VALID_PASSWORD} 
     Click Sign In Button On Login Page
+    
+Steps To Search For A Flight Number In The Search Feature
+    [Arguments]    ${flight_number}
+    Click Search Menu
+    Input Flight Number On Search Page      ${flight_number}  
+    Click Search Button On Search Page
+    IF   '${flight_number}' != 'CADX2214'
+        Wait Until Page Contains                ${ALERT_TEXT}   
+    END
 
 *** Test Cases ***
 # Expected Success, Actual Failed (Bug)
 Successfully Search For A Valid Flight Number
     Success Sign In
-    Click Search Menu
-    Input Flight Number On Search Page      ${VALID_FLIGHT_NUMBER}  
-    Click Search Button On Search Page
+    Steps To Search For A Flight Number In The Search Feature    CADX2214
     
 Failed To Search For Invalid Flight Number
     Success Sign In
-    Click Search Menu
-    Input Flight Number On Search Page      ${INVALID_FLIGHT_NUMBER}
-    Click Search Button On Search Page
-    Wait Until Page Contains                ${ALERT_TEXT}         
+    Steps To Search For A Flight Number In The Search Feature    invalidnumber  
 
 Failed To Search With An Empty Flight Number
     Success Sign In
-    Click Search Menu
-    Input Flight Number On Search Page      ${EMPTY_FLIGHT_NUMBER}
-    Click Search Button On Search Page
-    Wait Until Page Contains                ${ALERT_TEXT}     
+    Steps To Search For A Flight Number In The Search Feature    ${EMPTY_FLIGHT_NUMBER}
