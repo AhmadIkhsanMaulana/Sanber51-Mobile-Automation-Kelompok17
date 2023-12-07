@@ -18,7 +18,7 @@ Success Sign In
     Click Sign In Button On Login Page
 
 *** Test Cases ***
-# Expected Success, Actual Failed (Bug)
+# Expected Success Back to Sign In Page, Actual Failed (Bug)
 Successfuly Signed Out From Flight Page
     Success Sign In
     Click Sign Out Button 
