@@ -11,7 +11,7 @@ ${APP_ACTIVITY}          com.example.myapplication.MainActivity
 
 *** Keywords ***
 Open Flight Application
-    Open Application       ${REMOTE_URL}
+   Open Application        ${REMOTE_URL}
     ...                    platformName=${PLATFORM_NAME}
     ...                    platformVersion=${PLATFORM_VERSION}
     ...                    deviceName=${DEVICE_NAME}

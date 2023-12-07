@@ -10,7 +10,7 @@ Test Teardown   Close Flight Application
 *** Variables ***
 ${VALID_USERNAME}       support@ngendigital.com
 ${VALID_PASSWORD}       abc123
-   
+
 *** Keywords ***
 Common Form Booking One Way Trip Steps
     [Arguments]      ${check_date}    ${book_type}
